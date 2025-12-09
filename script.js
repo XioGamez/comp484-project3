@@ -17,6 +17,7 @@ const itemList = document.getElementById("item-list");
 // --- Task 3: Selecting and Changing Inner HTML ---
 // Write the code here to select the mainTitle and update its innerHTML:
 // Example: mainTitle.innerHTML = "New Title";
+mainTitle.innerHTML = "DOM Project: Ready!"
 
 /* ======================================= */
 // --- Task 4: Attribute Modification ---
