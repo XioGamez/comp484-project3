@@ -41,12 +41,22 @@ function toggleStatus (e)
     e.preventDefault(); // task 6
 
     // task 7
-    if (!statusOutput.classList.contains("hidden"))
+    if (!statusOutput.classList.contains("hidden")) {
         mainTitle.style.backgroundColor = "yellow";
+        createTimeStamp(); // task 8
+    }
     else
         mainTitle.style.backgroundColor = "";
 }
 toggleButton.addEventListener("click", toggleStatus); // task 5
+
+// task 8
+function createTimeStamp()
+{
+    const span = document.createElement("span");
+    span.innerHTML = new Date().toLocaleTimeString();
+    statusOutput.appendChild(span);
+}
 
 /* ======================================= */
 // --- Task 10: Timed Animation ---
