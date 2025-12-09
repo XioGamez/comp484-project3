@@ -71,3 +71,25 @@ function createTimeStamp()
 // Define the startFlashing() and stopFlashing() functions using
 // setInterval() and clearInterval() [8, 9], and bind them to the
 // timerButton using addEventListener for 'click' and 'dblclick' [10].
+function startFlashing() {
+    if (intervalId !== null)
+        return;
+
+    intervalId = setInterval(() => {
+        controlPanel.classList.toggle("hidden");
+    }, 500);
+}
+
+function stopFlashing() {
+    if (intervalId === null)
+        return;
+
+    clearInterval(intervalId);
+    intervalId = null;
+    controlPanel.classList.remove("hidden");
+}
+// Single click → start flashing (if not already running)
+timerButton.addEventListener("click", () => {
+    if (!intervalId) startFlashing();
+});
+timerButton.addEventListener("dblclick", stopFlashing);
