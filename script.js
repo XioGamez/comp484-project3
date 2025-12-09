@@ -39,6 +39,12 @@ function toggleStatus (e)
 {
     statusOutput.classList.toggle("hidden"); // task 5
     e.preventDefault(); // task 6
+
+    // task 7
+    if (!statusOutput.classList.contains("hidden"))
+        mainTitle.style.backgroundColor = "yellow";
+    else
+        mainTitle.style.backgroundColor = "";
 }
 toggleButton.addEventListener("click", toggleStatus); // task 5
 
