@@ -37,9 +37,10 @@ toggleButton.setAttribute("data-action", "status-toggle");
 // here to handle the click event on the toggleButton [6, 7].
 function toggleStatus (e)
 {
-    statusOutput.classList.toggle("hidden");
+    statusOutput.classList.toggle("hidden"); // task 5
+    e.preventDefault(); // task 6
 }
-toggleButton.addEventListener("click", toggleStatus);
+toggleButton.addEventListener("click", toggleStatus); // task 5
 
 /* ======================================= */
 // --- Task 10: Timed Animation ---
